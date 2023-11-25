@@ -2,6 +2,11 @@
 #include "lemlib/api.hpp"
 #include "lemlib/logger/stdout.hpp"
 #include "pros/misc.h"
+//  paths
+ASSET(Auton1Path1_text);
+ASSET();
+ASSET();
+ASSET();
 
 // controller
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
