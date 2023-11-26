@@ -13,9 +13,9 @@ pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
 // drive motors
 pros::Motor lF(-8, pros::E_MOTOR_GEARSET_06); // left front motor. port 8, reversed
-pros::Motor lB(-20, pros::E_MOTOR_GEARSET_06); // left Back motor. port 20, reversed
-pros::Motor rF(2, pros::E_MOTOR_GEARSET_06); // right front motor. port 2
-pros::Motor rB(11, pros::E_MOTOR_GEARSET_06); // right Back motor. port 11
+pros::Motor lB(-7, pros::E_MOTOR_GEARSET_06); // left Back motor. port 20, reversed
+pros::Motor rF(5, pros::E_MOTOR_GEARSET_06); // right front motor. port 2
+pros::Motor rB(4, pros::E_MOTOR_GEARSET_06); // right Back motor. port 11
 
 // motor groups
 pros::MotorGroup leftMotors({lF, lB}); // left motor group
@@ -25,9 +25,9 @@ pros::MotorGroup rightMotors({rF, rB}); // right motor group
 pros::Imu imu(21);
 
 //Declaring every other motor and Pistons
-pros::Motor Intake(3);
-pros::Motor Lift(4);
-pros::Motor Slapper(5);
+pros::Motor Intake(10);
+pros::Motor Lift(2);
+pros::Motor Slapper(3);
 pros::ADIDigitalOut IntakePiston('A');
 pros::ADIDigitalOut WingPistons('B');
 
