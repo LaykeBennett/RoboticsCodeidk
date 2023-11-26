@@ -135,7 +135,7 @@ void Tune_Lateral_Pid(){
 }
 void Tune_Angular_Pid(){
     chassis.setPose(0,0,0);
-    chassis.turnTo(30,0, 1000, true, 100)
+    chassis.turnTo(30,0, 1000, true, 100);
 
 }
 
