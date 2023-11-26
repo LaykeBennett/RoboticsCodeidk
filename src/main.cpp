@@ -31,7 +31,7 @@ pros::ADIDigitalOut WingPistons('B');
 lemlib::Drivetrain drivetrain(&leftMotors, // left motor group
                               &rightMotors, // right motor group
                               10, // 10 inch track width
-                              lemlib::Omniwheel::NEW_325, // using new 3.25" omnis
+                              lemlib::Omniwheel::OLD_325, // using old 3.25" omnis
                               360, // drivetrain rpm is 360
                               2 // chase power is 2. If we had traction wheels, it would have been 8
 );
