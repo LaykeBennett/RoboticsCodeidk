@@ -25,7 +25,7 @@ pros::Motor Lift(2);
 pros::Motor Slapper(3);
 pros::ADIDigitalOut IntakePiston('A');
 pros::ADIDigitalOut WingPistons('B');
-bool WingBool = false
+bool WingBool = false;
 
 
 // drivetrain settings
