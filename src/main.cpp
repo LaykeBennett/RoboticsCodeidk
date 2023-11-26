@@ -83,12 +83,12 @@ void Right_Side_4_Ball(){
     WingPistons.set_value(true); // Pushes the matchload Triball off to the side
     pros::delay(15); // Waits 15 Miliseconds
     WingPistons.set_value(false); // Retracts wings
-    chassis.turnTo(10,-6,1000, true,80); //Turns till the first Triball
+    chassis.turnTo(10,-6,1000, true,100); //Turns till the first Triball
     chassis.waitUntilDone(); // Waits till the previous Command is Finished
     Intake = 127; // Sets Intake to max Speed to intake Triball
     chassis.moveTo(10,-6,3000, true, 100); // Moves to the first triball
     chassis.waitUntilDone(); // Waits till the previous Command is Finished
-    chassis.turnTo(44,-6,1000, true,80); // Turns Towards the Goal
+    chassis.turnTo(44,-6,1000, true,100); // Turns Towards the Goal
     chassis.waitUntilDone(); // Waits till the previous Command is Finished
     WingPistons.set_value(true); // Pushes out wings to push in the triballs better.
     Intake = -127; //Sets Intake to Max Speed In reverse to outtake Triball
@@ -97,27 +97,27 @@ void Right_Side_4_Ball(){
     WingPistons.set_value(false); // Retracts wings
     chassis.moveTo(33,-6,3000,false); // Go backwards from the goal 
     chassis.waitUntilDone(); // Waits till the Previous Command is Finished
-    chassis.turnTo(12,-20,1000, true,80); // Turns to the 3rd triball
+    chassis.turnTo(12,-20,1000, true,100); // Turns to the 3rd triball
     chassis.waitUntilDone(); // Waits Till the Previous Command is Finished
     Intake = 127; // Sets Intake to Max Speed to intake the Triball
     chassis.moveTo(12,-20,3000,true,100); // Moves to the 3rd Triball
     chassis.waitUntilDone(); // Waits till the Previous Command is Finished
-    chassis.turnTo(40,-13,1000, true,80); // Turns to wards the goal
+    chassis.turnTo(40,-13,1000, true,100); // Turns to wards the goal
     chassis.waitUntilDone(); // Waits till the previous command is finished
     Intake = -127; // Sets Intake to Max Speed in rever to outtake the Triball
     chassis.moveTo(40,-13,3000, true, 100); // Moves Towards the goal to push in the 3rd triball
     chassis.waitUntilDone(); // waits till the previous command is Finished
     chassis.moveTo(30,-13,3000, false, 100); // Moves backwards from the goal
     chassis.waitUntilDone(); // Waits till the previous commend is finished
-    chassis.turnTo(45,-59,1000, true,80); // Turns back to where we started roughly
+    chassis.turnTo(45,-59,1000, true,100); // Turns back to where we started roughly
     chassis.waitUntilDone(); // Waits till the previous command is finished
     chassis.moveTo(45,-59,3000, true, 100); // Moves back to where we started roughtly
     chassis.waitUntilDone(); // Waits till the previous command is finished
-    chassis.turnTo(59,-43,1000, true,80); // Turns to  the edge of the match load bar
+    chassis.turnTo(59,-43,1000, true,100); // Turns to  the edge of the match load bar
     chassis.waitUntilDone(); // Waits till the previous command is finished
     chassis.moveTo(59,-43,3000, true,100); // Moves to the edge of the match load bar.
     chassis.waitUntilDone(); // Waits till the previous command is finished
-    chassis.turnTo(59,-31,1000, true,80); // Turns towards the goal
+    chassis.turnTo(59,-31,1000, true, 100); // Turns towards the goal
     chassis.waitUntilDone(); // waits till the previous command is finished
     chassis.moveTo(59,-43,3000,true, 100); // Runs into the goal to push the preload triball into the goal
     chassis.waitUntilDone(); // waits till the the previous command is finished
@@ -129,6 +129,16 @@ void Right_Side_4_Ball(){
 
 
 }
+void Tune_Lateral_Pid(){
+    chassis.setPose(0,0,0);
+    chassis.moveTo(10, 0, 1000, 100);
+}
+void Tune_Angular_Pid(){
+    chassis.setPose(0,0,0);
+    chassis.turnTo(30,0, 1000, true, 100)
+
+}
+
 /**
  * Runs initialization code. This occurs as soon as the program is started.
  *
@@ -183,7 +193,7 @@ void competition_initialize() {}
  * This is an example autonomous routine which demonstrates a lot of the features LemLib has to offer
  */
 void autonomous() {
-    Right_Side_4_Ball();
+    
 }
 
 /**
