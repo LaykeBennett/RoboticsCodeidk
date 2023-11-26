@@ -2,7 +2,6 @@
 #include "lemlib/api.hpp"
 #include "lemlib/logger/stdout.hpp"
 #include "pros/misc.h"
-
 // controller
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
@@ -68,7 +67,6 @@ lemlib::OdomSensors sensors(nullptr, // vertical tracking wheel 1, set to nullpt
 
 // create the chassis
 lemlib::Chassis chassis(drivetrain, linearController, angularController, sensors);
-
 
 void Right_Side_4_Ball(){
     ///////////////////////////
@@ -186,7 +184,6 @@ void competition_initialize() {}
  */
 void autonomous() {
     Right_Side_4_Ball();
-
 }
 
 /**
