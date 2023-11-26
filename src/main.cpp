@@ -25,6 +25,7 @@ pros::Motor Lift(2);
 pros::Motor Slapper(3);
 pros::ADIDigitalOut IntakePiston('A');
 pros::ADIDigitalOut WingPistons('B');
+bool WingBool = false
 
 
 // drivetrain settings
@@ -187,6 +188,31 @@ void opcontrol() {
         int rightX = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
         // move the chassis with arcade drive
         chassis.arcade(leftY, rightX);
+        // Wing Code
+        if(controller.get_digital_new_press(DIGITAL_R1)){
+            WingBool = !WingBool;
+            WingPistons.set_value(WingBool);
+        }
+        //Intake Code
+        if(controller.get_digital(DIGITAL_L1)){
+            Intake = 127;
+        } else if(controller.get_digital(DIGITAL_L2)){
+            Intake = -127;
+        }else{
+            Intake = 0;
+        }
+        // Slapper Code
+        if(controller.get_digital(DIGITAL_R2)){
+            Slapper = 127;
+        }
+        // Lift Code
+        if(controller.get_digital(DIGITAL_UP)){
+            Lift =127;
+        } else if(controller.get_digital(DIGITAL_X)){
+            Lift= -127;
+        }else{
+            Lift= 0;
+        }
         // delay to save resources
         pros::delay(10);
     }
