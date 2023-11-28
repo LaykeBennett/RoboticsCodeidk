@@ -6,7 +6,8 @@
 
 //Paths
 ASSET(AutonSkillsPath1_txt);
-
+ASSET(AutonSkillsPath2_txt);
+ASSET(AutonSkillsPath3_text)
 // controller
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
