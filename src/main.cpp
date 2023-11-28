@@ -139,6 +139,9 @@ void Tune_Angular_Pid(){
 
 }
 
+void Skills_Auton(){
+    
+}
 /**
  * Runs initialization code. This occurs as soon as the program is started.
  *
