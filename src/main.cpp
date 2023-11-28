@@ -2,6 +2,11 @@
 #include "lemlib/api.hpp"
 #include "lemlib/logger/stdout.hpp"
 #include "pros/misc.h"
+
+
+//Paths
+ASSET(AutonSkillsPath1_txt);
+
 // controller
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
@@ -20,8 +25,8 @@ pros::Imu imu(21);
 
 //Declaring every other motor and Pistons
 pros::Motor Intake(10);
-pros::Motor Lift(2);
-pros::Motor Slapper(3);
+pros::Motor Lift(3);
+pros::Motor Slapper(2);
 pros::ADIDigitalOut IntakePiston('A');
 pros::ADIDigitalOut WingPistons('B');
 bool WingBool = false;
@@ -140,7 +145,15 @@ void Tune_Angular_Pid(){
 }
 
 void Skills_Auton(){
-    
+    chassis.setPose(36,-60,0);
+    chassis.turnTo(60,-40,1000,true,100);
+    chassis.moveTo(60,-40,1000,true,100);
+    chassis.turnTo(60,-30,1000,true,100);
+    chassis.moveTo(60,-30,1000,true,100);
+    chassis.moveTo(60,-40,1000,false,100);
+    chassis.turnTo(-20,-20, 1000, true,100);
+    Slapper = 127;
+    pros::delay(33500);
 }
 /**
  * Runs initialization code. This occurs as soon as the program is started.
