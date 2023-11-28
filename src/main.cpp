@@ -155,6 +155,9 @@ void Skills_Auton(){
     chassis.turnTo(-20,-20, 1000, true,100);
     Slapper = 127;
     pros::delay(33500);
+    chassis.follow(AutonSkillsPath1_txt,15, 15000,true);
+    chassis.follow(AutonSkillsPath2_txt, 15, 15000, true);
+    chassis.follow(AutonSkillsPath3_text,15,15000,true);
 }
 /**
  * Runs initialization code. This occurs as soon as the program is started.
