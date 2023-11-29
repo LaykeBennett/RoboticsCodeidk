@@ -244,6 +244,8 @@ void opcontrol() {
         // Slapper Code
         if(controller.get_digital(DIGITAL_R2)){
             Slapper = 127;
+        }else{
+            Slapper = 0;
         }
         // Lift Code
         if(controller.get_digital(DIGITAL_UP)){
