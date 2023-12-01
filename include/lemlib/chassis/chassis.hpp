@@ -286,7 +286,7 @@ class Chassis {
          * curve, refer to the `defaultDriveCurve` documentation.
          */
         void curvature(int throttle, int turn, float cureGain = 0.0);
-    private:
+    public:
         pros::Mutex mutex;
         float distTravelled = 0;
 
